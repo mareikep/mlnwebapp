@@ -1,0 +1,17 @@
+{% extends 'mln_layout.html' %}
+
+{% block title %}Overview{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block menu_right %}
+    {{ super() }}
+    {% block _menu_right %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    {% include 'prac_content.html' %}
+{% endblock %}

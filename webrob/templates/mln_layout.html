@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>PRAC - {% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('download_static', filename='images/favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('download_static', filename='css/style.css') }}">
+    <script type="text/javascript">
+      var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>        
+{% endblock %}
+
+{% block menu_right %}
+    {% block _menu_right %}{% endblock %}
+{% endblock %}
+
+
+{% block content %}
+    <div
+            style="left: 0; bottom: 0; position: absolute; width: 300px; height: 100px; z-index: 1000;"><a href="{{ url_for('mln')}}"><img
+            src="{{ url_for('download_static', filename='images/mln_logo.png') }}"></a></div>
+    <div id="mln_container"></div>
+{% endblock  %}
+
