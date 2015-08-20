@@ -4,9 +4,12 @@
 
 {% block head %}
     {{ super() }}
-    <script type="text/javascript"
-            src="{{ url_for('download_static', filename='script/webmln.js') }}"></script>
     <meta name="viewport" content="user-scalable=yes">
+    <link rel="stylesheet" href="{{ url_for('download_static', filename='css/codemirror.css') }}">
+    <script type="text/javascript" src="{{ url_for('download_static', filename='script/webmln.js') }}"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="{{ url_for('download_static', filename='script/codemirror.js') }}"></script>
+    <script src="{{ url_for('download_static', filename='script/javascript.js') }}"></script>
 {% endblock %}
 
 {% block menu %}
