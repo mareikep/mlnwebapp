@@ -1,4 +1,4 @@
-FROM openease/easeapp
+FROM openease/flask
 MAINTAINER Mareike Picklum, mareikep@cs.uni-bremen.de
 USER root
 
@@ -15,7 +15,6 @@ COPY requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
 
 WORKDIR /opt/webapp
-USER ros
 ADD . /opt/webapp/
 
 ENTRYPOINT /bin/bash /opt/webapp/init.bash

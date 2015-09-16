@@ -1,4 +1,11 @@
-docker-py 
+docker-py
+jpype
+ipython
+nltk
+pyparsing
+pmw
+beautifulsoup4
+web.py
 Jinja2
 Werkzeug
 wsgiref
