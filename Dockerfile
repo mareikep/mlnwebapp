@@ -2,8 +2,13 @@ FROM openease/flask
 MAINTAINER Mareike Picklum, mareikep@cs.uni-bremen.de
 USER root
 
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q curl python-all python-support python-scipy python-pip python-dev python-jpype ipython python-tk wget git python-nltk libpq-dev openjdk-7-jre default-jre-headless dvipng python-pyparsing python-numpy python-pmw
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q bash build-essential \
+              gfortran libatlas-base-dev libffi-dev libssl-dev curl git \
+              python2.7 python2.7-dev python-pip python-setuptools python-tk python-imaging \
+              wget libpq-dev \
+              openjdk-7-jre default-jre-headless \
+              dvipng libjpeg-dev
+
 RUN update-java-alternatives --jre -s java-1.7.0-openjdk-amd64
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre
 ENV PATH $JAVA_HOME/bin:$PATH
@@ -12,7 +17,7 @@ ENV DOCKER_LINKS postgres_db:postgres dockerbridge:dockerbridge
 ENV DOCKER_VOLUMES prac_tools prac_data
 
 COPY requirements.txt /tmp/
-RUN pip install -r /tmp/requirements.txt
+RUN sudo pip install --upgrade pip && sudo pip install -U -r /tmp/requirements.txt
 
 WORKDIR /opt/webapp
 ADD . /opt/webapp/
