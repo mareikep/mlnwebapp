@@ -8,6 +8,7 @@ pyparsing
 Jinja2
 graphviz
 psutil
+matplotlib
 werkzeug
 python-geoip-geolite2
 python-geoip
