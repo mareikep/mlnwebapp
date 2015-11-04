@@ -2,7 +2,6 @@ pyopenssl
 ndg-httpsclient
 pyasn1
 requests[security]
-scipy
 tabulate
 pyparsing
 Jinja2

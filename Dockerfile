@@ -4,7 +4,7 @@ USER root
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q bash build-essential \
               gfortran libatlas-base-dev libffi-dev libssl-dev curl git \
-              python2.7 python2.7-dev python-pip python-setuptools python-tk python-support python-imaging \
+              python2.7 python2.7-dev python-pip python-setuptools python-tk python-support python-imaging python-scipy \
               wget libpq-dev texlive-latex-recommended \
               openjdk-7-jre default-jre-headless \
               dvipng libjpeg-dev libpng-dev pkg-config libfreetype6-dev \
