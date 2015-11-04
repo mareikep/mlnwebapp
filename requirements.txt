@@ -6,7 +6,7 @@ tabulate
 pyparsing
 Jinja2
 graphviz
-psutil
+psutil==0.4.1
 matplotlib
 werkzeug
 python-geoip-geolite2
