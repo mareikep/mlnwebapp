@@ -25,7 +25,7 @@ def init_webapp(app, db):
     mlnApp.app.config['UPLOAD_FOLDER'] = '/home/ros/pracfiles'
     mlnApp.app.config['MLN_ROOT_PATH'] = '/opt/practools/tools/pracmln'
     mlnApp.app.config['EXAMPLES_FOLDER'] = os.path.join(mlnApp.app.config['MLN_ROOT_PATH'], 'examples')
-    mlnApp.app.config['LOG_FOLDER'] = os.path.join('/opt/practools/tools/pracmln/webmln/gui/', 'log')
+    mlnApp.app.config['LOG_FOLDER'] = os.path.join('/home/ros/pracfiles/mln', 'log')
 
     if not os.path.exists(mlnApp.app.config['LOG_FOLDER']):
        os.mkdir(mlnApp.app.config['LOG_FOLDER'])
